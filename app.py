@@ -16,7 +16,7 @@ class MyClient(discord.Client):
             return
 
         if ("joke" in message.content):
-            await message.channel.send("Wait and see")
+            await message.channel.send("Wait \nand see")
 
 
 client = MyClient()
