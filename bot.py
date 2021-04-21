@@ -1,6 +1,7 @@
 from dotenv import load_dotenv
 import discord
 import os
+from jokes import get_jokes
 
 load_dotenv()
 token = os.getenv('TOKEN')
@@ -16,7 +17,8 @@ class MyClient(discord.Client):
             return
 
         if ("joke" in message.content):
-            await message.channel.send("Wait \nand see")
+            final_joke = get_jokes()
+            await message.channel.send(final_joke)
 
 
 client = MyClient()
