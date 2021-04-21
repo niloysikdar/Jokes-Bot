@@ -1,7 +1,8 @@
 from dotenv import load_dotenv
-import discord
 import os
+import discord
 from jokes import get_jokes
+
 
 load_dotenv()
 token = os.getenv('TOKEN')
