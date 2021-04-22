@@ -17,7 +17,7 @@ class MyClient(discord.Client):
         if message.author == self.user:
             return
 
-        if ("joke" in message.content):
+        if ("joke" in message.content.lower()):
             final_joke = get_jokes()
             await message.channel.send(final_joke)
 
